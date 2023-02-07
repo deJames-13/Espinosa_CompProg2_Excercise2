@@ -1004,7 +1004,7 @@ Partial Class Form1
         Me.Padding = New System.Windows.Forms.Padding(2)
         Me.ShowIcon = False
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Window Forms"
+        Me.Text = "Machine Problem 2 - Espinosa, Derick James M. S-1A"
         Me.mainFrame.ResumeLayout(False)
         Me.mainFrame.PerformLayout()
         Me.card3.ResumeLayout(False)

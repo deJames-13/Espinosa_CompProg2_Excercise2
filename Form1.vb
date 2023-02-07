@@ -1,9 +1,7 @@
-﻿Public Class Form1
-
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        mainFrame.Focus()
-    End Sub
-
+﻿' ESPINOSA, Derick James M. 
+' BSIT-S-T-1A
+' Machine Problem 2
+Public Class Form1
     ' NUMBER 1 - Computing Inventory Value
     Private Sub btnComp1_Click(sender As Object, e As EventArgs) Handles btnComp1.Click
         Dim iQuant As Integer

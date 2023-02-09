@@ -2,6 +2,17 @@
 ' BSIT-S-T-1A
 ' Machine Problem 2
 Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtRes1.Enabled = False
+
+        txtCost2.Enabled = False
+        txtTax2.Enabled = False
+        txtTotal2.Enabled = False
+
+        txtDiscAmt3.Enabled = False
+        txtAmt3.Enabled = False
+
+    End Sub
     ' NUMBER 1 - Computing Inventory Value
     Private Sub btnComp1_Click(sender As Object, e As EventArgs) Handles btnComp1.Click
         Dim iQuant As Integer
@@ -127,4 +138,6 @@ Public Class Form1
         box3.Visible = Not box3.Visible
         card3.Height -= box3.Height
     End Sub
+
+
 End Class

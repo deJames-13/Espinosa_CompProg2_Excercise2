@@ -1,14 +1,17 @@
 ﻿' ESPINOSA, Derick James M. 
 ' BSIT-S-T-1A
 ' Machine Problem 2
+Imports System.Globalization
+
 Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'Box 1
         txtRes1.Enabled = False
-
+        ' Box 2
         txtCost2.Enabled = False
         txtTax2.Enabled = False
         txtTotal2.Enabled = False
-
+        ' Box 3
         txtDiscAmt3.Enabled = False
         txtAmt3.Enabled = False
 
@@ -27,8 +30,9 @@ Public Class Form1
         fCost = Convert.ToDouble(txtCost1.Text)
         iQuant = Convert.ToInt64(txtQuant1.Text)
         fTotal = Convert.ToDouble(fCost * iQuant)
+        fTotal = (Double).Parse(fTotal, Globalization.NumberStyles.Currency)
 
-        txtRes1.Text = strDesc & vbCrLf & "Total Value: " & fTotal
+        txtRes1.Text = strDesc & vbCrLf & "Total Value: " & fTotal.ToString("C2")
 
     End Sub
 
@@ -50,9 +54,9 @@ Public Class Form1
         iTaxDue = iCost * TAX_RATE
         iTotal = iCost + iTaxDue
 
-        txtCost2.Text = iCost
-        txtTax2.Text = iTaxDue
-        txtTotal2.Text = iTotal
+        txtCost2.Text = iCost.ToString("C2")
+        txtTax2.Text = iTaxDue.ToString("C2")
+        txtTotal2.Text = iTotal.ToString("C2")
 
     End Sub
 
@@ -72,8 +76,8 @@ Public Class Form1
         iDiscAmt = iPrice * DISCOUNT
         iAmt = iPrice - iDiscAmt
 
-        txtDiscAmt3.Text = iDiscAmt
-        txtAmt3.Text = iAmt
+        txtDiscAmt3.Text = iDiscAmt.ToString("C2")
+        txtAmt3.Text = iAmt.ToString("C2")
 
     End Sub
 
